@@ -1,4 +1,9 @@
+
+#------------------------------------------------
 ### Customer Segmentation Using K-Means Clustering with R
+
+#------------------------------------------------
+
 
 ### Install and upload packages 
 install.packages("ggplot2")
@@ -37,7 +42,11 @@ customer_data <- read.csv("Mall_Customers.csv")
 customer_data
 
 
+
+#------------------------------------------------
 #### Exploratory Data Analysis
+
+#------------------------------------------------
 
 
 ### Display the First 10 Rows of the Dataset
@@ -76,6 +85,8 @@ sd(customer_data$Spending.Score..1.100.)
 
 
 
+
+#------------------------------------------------
 ### Data Visualization with Bar Chart for Gender Comparison
 a=table(customer_data$Gender)
 barplot(a,main="Bar Chart for Gender Comparision",
@@ -91,6 +102,8 @@ barplot(a,main="Bar Chart for Gender Comparision",
 
 
 
+
+#------------------------------------------------
 ### Data Visualization with Pie Chart for Gender Comparison
 pct=round(a/sum(a)*100)
 lbs=paste(c("Female","Male")," ",pct,"%",sep=" ")
@@ -105,11 +118,15 @@ pie3D(a,labels=lbs,
 
 
 
+
+#------------------------------------------------
 ### Data Visualization of Age Distribution
 summary(customer_data$Age)
 
 
 
+
+#------------------------------------------------
 ### Histogram for Age Distribution
 hist(customer_data$Age,
      col="blue",
@@ -125,6 +142,8 @@ boxplot(customer_data$Age,
 
 
 
+
+#------------------------------------------------
 ### Analysis of the Annual Income of the Customers
 
 
@@ -140,6 +159,8 @@ hist(customer_data$Annual.Income..k..,
 
 
 
+
+#------------------------------------------------
 ### Density Plot for Annual Income
 plot(density(customer_data$Annual.Income..k..),
      col="yellow",
@@ -150,11 +171,15 @@ polygon(density(customer_data$Annual.Income..k..),
         col="#ccff66")
 
 
+
+#------------------------------------------------
 ### Descriptive Statistics for Spending Score of the Customers
 summary(customer_data$Spending.Score..1.100.)
 
 
 
+
+#------------------------------------------------
 ### Box Plot for Spending Score
 boxplot(customer_data$Spending.Score..1.100.,
         horizontal=TRUE,
@@ -163,6 +188,8 @@ boxplot(customer_data$Spending.Score..1.100.,
 
 
 
+
+#------------------------------------------------
 ### Histogram for Spending Score
 hist(customer_data$Spending.Score..1.100.,
      main="Histogram for Spending Score",
@@ -173,12 +200,16 @@ hist(customer_data$Spending.Score..1.100.,
 
 
 
+
+#------------------------------------------------
 ### K-Means Clustering and Elbow Method 
 library(purrr)
 set.seed(123)
 
 
 
+
+#------------------------------------------------
 ### function to calculate total intra-cluster sum of square 
 iss <- function(k) {
   kmeans(customer_data[,3:5],k,iter.max=100,nstart=100,algorithm="Lloyd" )$tot.withinss
@@ -193,59 +224,81 @@ plot(k.values, iss_values,
 
 
 
+
+#------------------------------------------------
 ### Average Silhouette Method
 library(cluster)  # Finding Groups in Data
 library(gridExtra)  # Miscellaneous Functions for "Grid" Graphics
 library(grid)
 
 
+
+#------------------------------------------------
 k2<-kmeans(customer_data[,3:5],2,iter.max=100,nstart=50,algorithm="Lloyd")
 s2<-plot(silhouette(k2$cluster,dist(customer_data[,3:5],"euclidean")))
 
 
 
+
+#------------------------------------------------
 k3<-kmeans(customer_data[,3:5],3,iter.max=100,nstart=50,algorithm="Lloyd")
 s3<-plot(silhouette(k3$cluster,dist(customer_data[,3:5],"euclidean")))
 
 
 
+
+#------------------------------------------------
 k4<-kmeans(customer_data[,3:5],4,iter.max=100,nstart=50,algorithm="Lloyd")
 s4<-plot(silhouette(k4$cluster,dist(customer_data[,3:5],"euclidean")))
 
 
 
+
+#------------------------------------------------
 k5<-kmeans(customer_data[,3:5],5,iter.max=100,nstart=50,algorithm="Lloyd")
 s5<-plot(silhouette(k5$cluster,dist(customer_data[,3:5],"euclidean")))
 
 
 
+
+#------------------------------------------------
 k6<-kmeans(customer_data[,3:5],6,iter.max=100,nstart=50,algorithm="Lloyd")
 s6<-plot(silhouette(k6$cluster,dist(customer_data[,3:5],"euclidean")))
 
 
 
+
+#------------------------------------------------
 k7<-kmeans(customer_data[,3:5],7,iter.max=100,nstart=50,algorithm="Lloyd")
 s7<-plot(silhouette(k7$cluster,dist(customer_data[,3:5],"euclidean")))
 
 
 
+
+#------------------------------------------------
 k8<-kmeans(customer_data[,3:5],8,iter.max=100,nstart=50,algorithm="Lloyd")
 s8<-plot(silhouette(k8$cluster,dist(customer_data[,3:5],"euclidean")))
 
 
 
 
+
+#------------------------------------------------
 k9<-kmeans(customer_data[,3:5],9,iter.max=100,nstart=50,algorithm="Lloyd")
 s9<-plot(silhouette(k9$cluster,dist(customer_data[,3:5],"euclidean")))
 
 
 
 
+
+#------------------------------------------------
 k10<-kmeans(customer_data[,3:5],10,iter.max=100,nstart=50,algorithm="Lloyd")
 s10<-plot(silhouette(k10$cluster,dist(customer_data[,3:5],"euclidean")))
 
 
 
+
+#------------------------------------------------
 ### Visualization for the Optimal Number of Clusters
 
 packageurl <- "https://cran.r-project.org/src/contrib/Archive/emmeans/emmeans_1.7.0.tar.gz"
@@ -260,28 +313,38 @@ library(factoextra)  # Extract and Visualize the Results of Multivariate Data An
 
 
 
+
+#------------------------------------------------
 ### Optimal Number of Clusters
 fviz_nbclust(customer_data[,3:5], kmeans, method = "silhouette")
 
 
 
+
+#------------------------------------------------
 #####
 set.seed(125)
 stat_gap <- clusGap(customer_data[,3:5], FUN = kmeans, nstart = 25,
 
 
 
+
+#------------------------------------------------
 K.max = 10, B = 50)
 fviz_gap_stat(stat_gap)
 #####
 
 
 
+
+#------------------------------------------------
 k6<-kmeans(customer_data[,3:5],6,iter.max=100,nstart=50,algorithm="Lloyd")
 k6
 
 
 
+
+#------------------------------------------------
 ### Clustering Result
 ###  Data Visualization for the Clustering Results using the First Two Principle Components
 pcclust=prcomp(customer_data[,3:5],scale=FALSE) #principal component analysis
@@ -294,6 +357,8 @@ pcclust$rotation[,1:2]
 
 
 
+
+#------------------------------------------------
 ### Data Visualization for the Clusters
 set.seed(1)
 ggplot(customer_data, aes(x =Annual.Income..k.., y = Spending.Score..1.100.)) + 
@@ -307,6 +372,8 @@ ggplot(customer_data, aes(x =Annual.Income..k.., y = Spending.Score..1.100.)) +
 
 
 
+
+#------------------------------------------------
 ### Data Visualization for Mall Customers
 ggplot(customer_data, aes(x =Spending.Score..1.100., y =Age)) + 
   geom_point(stat = "identity", aes(color = as.factor(k6$cluster))) +
@@ -318,6 +385,8 @@ ggplot(customer_data, aes(x =Spending.Score..1.100., y =Age)) +
 
 
 
+
+#------------------------------------------------
 ### Analyzing the K-Means Clustering Visualization
 kCols=function(vec){cols=rainbow (length (unique (vec)))
 return (cols[as.numeric(as.factor(vec))])}
