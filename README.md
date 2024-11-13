@@ -1,4 +1,5 @@
 # Customer-Segmentation-Using-K-Means-Clustering-with-R
+
 # Introduction
 
 **Problem Statement:** 
@@ -10,7 +11,10 @@ better meet the needs and preferences of different customer groups.
 
 # Dataset:
 
-The dataset used for this analysis is the "Mall_Customers" dataset available on Kaggle. 
+The dataset used for this analysis is the "Mall_Customers" dataset available on 
+
+Kaggle website (https://www.kaggle.com/code/amirmotefaker/customer-segmentation-using-r/input)
+
 
 It contains the following features:
 
@@ -18,21 +22,27 @@ It contains the following features:
 
 **•	Gender:** The gender of the customer.
 
-**•	Age: **The age of the customer.
+****•	Age:** The age of the customer.
 
-**•	Annual Income: **The annual income of the customer in thousands of dollars.  
+****•	Annual Income:** **The annual income of the customer in thousands of dollars.  
 
 **•	Spending Score**: A score assigned to each customer based on their spending behavior, ranging from 1 to 100.  
 
+
 # Data Analysis and Visualization
+
 
 # Exploratory Data Analysis for Mall Customers
 
+
 **Summary Statistics for Age Distribution**
+
 
 ![image](https://github.com/user-attachments/assets/9a10a837-3e43-41c0-86b0-78589b1c7238)
 
+
 **Age Distribution of Customers:**
+
 
 **•	Minimum Age:** The youngest customer is 18 years old.
 
@@ -44,7 +54,8 @@ It contains the following features:
 
 **•	Third Quartile (Q3):** 75% of the customers are 49 years old or younger.
 
-**•	Maximum Age: **The oldest customer is 70 years old.
+****•	Maximum Age**: The oldest customer is 70 years old.
+
 
 # Standard Deviation for Age
 
@@ -56,16 +67,20 @@ W**hat does this tell us?**
 
 **•	Spread of Ages**: A higher standard deviation indicates a wider spread of ages in the dataset. In this case, the relatively high standard deviation suggests that the ages of customers are quite diverse.
 
+
 •	**Potential for Segmentation:** The variation in ages can be leveraged to identify different customer segments based on age and tailor marketing strategies accordingly.
 
-•	**Outliers: **A high standard deviation might also indicate the presence of outliers, which could be investigated further to understand their impact on the overall analysis.
+****•	Outliers:** A high standard deviation might also indicate the presence of outliers, which could be investigated further to understand their impact on the overall analysis.
 
 # Summary Statistics for Annual Income
+
 ![image](https://github.com/user-attachments/assets/1b3ef266-585e-4de3-95c7-9dcfcd7fef52)
+
 
 Based on the summary statistics provided, we can observe the following about the annual income distribution of customers:
 
-**•	Minimum Income:**The lowest annual income in the dataset is $15,000.
+
+**•	Minimum Income:** The lowest annual income in the dataset is $15,000.
 
 
 **•	First Quartile (Q1):** 25% of the customers have an annual income of $41,500 or less.
@@ -93,11 +108,13 @@ Based on the summary statistics provided, we can observe the following about the
 
 # Summary Statistics for Age
 
-![image](https://github.com/user-attachments/assets/55a0a181-2627-4cc5-82cc-db468528825d)
+
+![image](https://github.com/user-attachments/assets/55a0a181-2627-4cc5-82cc-db468528825d
+
 
 **•	Minimum Age:** The youngest customer is 18 years old.
 
-**•	First Quartile (Q1): **25% of the customers are 28 years old or younger.
+**•	First Quartile (Q1):** **25% of the customers are 28 years old or younger.
 
 **•	Median Age:** The median age of the customers is 36 years old.
 
@@ -111,11 +128,12 @@ Based on the summary statistics provided, we can observe the following about the
 
 **•	Diverse Age Range:** The data suggests a diverse range of customer ages, catering to different demographics.
 
-**•	Middle-Aged Dominance: **The median age of 36 indicates that a significant portion of the customers are middle-aged.
+****•	Middle-Aged Dominance:** **The median age of 36 indicates that a significant portion of the customers are middle-aged.
 
 **•	Potential Target Groups:** The distribution can be used to identify target age groups for specific marketing campaigns or product offerings.
 
 **•	Outliers:** The minimum and maximum ages might be outliers, which could be investigated further to understand their impact on the overall analysis.
+
 
 **The Standard Deviation (SD) of Spending Score: 25.82352**
 
@@ -125,13 +143,19 @@ A higher standard deviation suggests that the spending scores are more spread ou
 
 **Interpretation:**
 
-**•	Variability in Spending Habits:** The high standard deviation implies that there is a significant difference in spending habits among customers. Some customers spend much more than others.
+**•	Variability in Spending Habits:** The high standard deviation implies that there is a significant difference in spending habits among customers. 
+
+Some customers spend much more than others.
+
+
 
 # Data Visualization and Insight
+
 
 # Bar Chart for Gender Comparison
 
 ![image](https://github.com/user-attachments/assets/70621f4d-bfc2-40d1-ac20-da051118f45e)
+
 
 we can observe the following about the gender distribution:
 
@@ -140,19 +164,27 @@ we can observe the following about the gender distribution:
 **•	Gender Imbalance:** The dataset appears to be skewed towards female customers.
 
 
+
 # Pie Chart for Gender Distribution
+
 
 ![image](https://github.com/user-attachments/assets/b591c412-954d-4fea-b2b5-8c7ef8b79b3e)
 
+
 We can observe the following about the gender distribution:
+
 
 **•	Female Dominance:** Approximately 56% of the customers are female.
 
 **•	Male Minority:** Approximately 44% of the customers are male.
 
+
+
 # Histogram for Age Distribuition
 
+
 ![image](https://github.com/user-attachments/assets/58d97f81-eda4-4b55-bf2a-e7d399308dfb)
+
 
 **Key Observations from the Histogram:**
 
@@ -164,9 +196,12 @@ We can observe the following about the gender distribution:
 
 **Potential Outliers:** There might be a few outliers at the higher end of the age range.
 
+
+
 # Box Plot for Age Distribution
 
 ![image](https://github.com/user-attachments/assets/8e4fd567-de54-4d11-a2e2-66c514dddc89)
+
 
 **Key Observations from the Boxplot:**
 
@@ -178,7 +213,10 @@ We can observe the following about the gender distribution:
 
 **Outliers:** There appear to be a few outliers on the higher end of the age range, as indicated by the individual points beyond the whiskers.
 
+
+
 # Histogram for Annual Income
+
 
 ![image](https://github.com/user-attachments/assets/81157ef6-9046-49d8-9693-43e003d2c5ed)
 
@@ -194,6 +232,8 @@ while a smaller proportion have significantly higher incomes.
 
 **•Outliers**: There are a few customers with very high annual incomes, as indicated by the bars on the right side of the histogram.
 
+
+
 # Density Plot for Annual Income
 
 ![image](https://github.com/user-attachments/assets/6225d1ac-2772-4c7e-8be8-2ff711e745a7)
@@ -201,6 +241,7 @@ while a smaller proportion have significantly higher incomes.
 **Key Observations:**
 
 •	**Right-Skewed Distribution:** The density plot confirms the right-skewed distribution of annual income, 
+
 indicating that a majority of customers have lower to moderate incomes, while a smaller portion has significantly higher incomes.
 
 
@@ -219,6 +260,7 @@ Businesses can identify target segments based on income levels and tailor market
 
 
 # Descriptive Statitsits for Spending Score**
+
 
 ![image](https://github.com/user-attachments/assets/0d482732-6b80-4b1c-9b99-151a7ce6e846)
 
@@ -247,9 +289,11 @@ Businesses can identify target segments based on income levels and tailor market
 
 **•	Potential Outliers**: The minimum value of 1 might be considered an outlier, as it is significantly lower than the rest of the data.
 
+
 # Box Plot Visualization for Spending Score
 
 ![image](https://github.com/user-attachments/assets/88996e4d-5024-4d87-b629-feb5e463ea4d)
+
 
 **Key Observations from the Boxplot:**
 
@@ -265,9 +309,11 @@ In this case, the whiskers are relatively short, indicating that there are no ex
 
 **Outliers:** There don't appear to be any significant outliers in the data, as there are no data points beyond the whiskers.
 
+
 # Histogram Visualzation for Spending Score
 
 ![image](https://github.com/user-attachments/assets/7491e249-97b6-4bac-b5a0-908b7492bb8c)
+
 
 **Key Observations:**
 
@@ -285,15 +331,15 @@ It classifies new data points based on the majority vote of its k nearest neighb
 
 **How KNN Works:**
 
-Choose the value of K: Determine the number of nearest neighbors to consider.
+**Choose the value of K:** Determine the number of nearest neighbors to consider.
 
-Calculate Distance: Calculate the distance between the new data point and all training data points. Common distance metrics include Euclidean distance and Manhattan distance.
+**Calculate Distance:** Calculate the distance between the new data point and all training data points. Common distance metrics include Euclidean distance and Manhattan distance.
 	
-Select Nearest Neighbors: Identify the k nearest neighbors based on the calculated distances.
+**Select Nearest Neighbors:** Identify the k nearest neighbors based on the calculated distances.
 
-Classification: For classification, assign the new data point to the class that is most frequent among its k nearest neighbors.
+****Classification**: For classification, assign the new data point to the class that is most frequent among its k nearest neighbors.
 
-Regression: For regression, calculate the average value of the target variable for the k nearest neighbors and assign that value to the new data point.
+**Regression:** For regression, calculate the average value of the target variable for the k nearest neighbors and assign that value to the new data point.
 
 **Key Points:**
 
@@ -351,6 +397,8 @@ In this plot, we can observe:
 Based on the elbow plot, the optimal number of clusters appears to be 4. Beyond this point, the decrease in WSS becomes less pronounced, indicating diminishing returns.
 
 # Silhouette Plot Visualization
+
+
 # Silhouette Plot Visualization for K=2 Clusters
 
 ![image](https://github.com/user-attachments/assets/f0b73451-2131-4f58-acd5-076d948c9343)
@@ -371,6 +419,8 @@ A silhouette plot is a visualization tool used to assess the quality of a cluste
 **•Cluster Cohesion:** The bars within each cluster are relatively tall, suggesting that the data points within each cluster are closely related.
 
 •	**Average Silhouette Width:** The average silhouette width of 0.29 indicates a moderately good clustering solution. A higher value would indicate better-defined
+
+
 
 # Silhouette Plot Visualization for K=3 Clusters
 
@@ -394,6 +444,7 @@ A silhouette plot is a visualization tool used to assess the quality of a cluste
 **•	Silhouette Width for Cluster 3:** The average silhouette width of 0.60 indicates that, on average, data points in this cluster are well-separated from other clusters.
 
 
+
 # Silhouette Plot Visualization for K=4 Clusters
 
 ![image](https://github.com/user-attachments/assets/a0ee72da-e90d-4e5f-9b7f-9e1414d547ca)
@@ -405,6 +456,8 @@ A silhouette plot is a visualization tool used to assess the quality of a cluste
 **•	Cluster Cohesion:** Within each cluster, the bars are generally tall, suggesting that the data points are closely related to each other.
 
 **•	Average Silhouette Width:** The average silhouette width of 0.41 indicates a moderately good clustering solution. A higher value would indicate better-defined clusters.
+
+
 
 # Silhouette Plot Visualization for K=5 Clusters
 
@@ -418,6 +471,9 @@ A silhouette plot is a visualization tool used to assess the quality of a cluste
 
 **•	Average Silhouette Width:** The average silhouette width of 0.44 indicates a moderately good clustering solution. A higher value would indicate better-defined clusters.
 
+
+
+
 # Silhouette Plot Visualization for K=6 Clusters
 
 ![image](https://github.com/user-attachments/assets/5d4d9cb2-7e01-4050-8bd6-26c4c494ff34)
@@ -429,6 +485,8 @@ A silhouette plot is a visualization tool used to assess the quality of a cluste
 **•	Cluster Cohesion**: Within each cluster, the bars are generally tall, suggesting that the data points are closely related to each other.
 
 **•	Average Silhouette Width:** The average silhouette width of 0.45 indicates a moderately good clustering solution. A higher value would indicate better-defined clusters.
+
+
 
 
 # Silhouette Plot Visualization for K=7 Clusters
@@ -444,6 +502,8 @@ A silhouette plot is a visualization tool used to assess the quality of a cluste
 
 **•	Average Silhouette Width:** The average silhouette width of 0.44 indicates a moderately good clustering solution. A higher value would indicate better-defined clusters.
 
+
+
 # Silhouette Plot Visualization for K=8 Clusters
 
 ![image](https://github.com/user-attachments/assets/5ba10d6d-6762-4f36-ba62-acdb7f120f16)
@@ -457,9 +517,11 @@ A silhouette plot is a visualization tool used to assess the quality of a cluste
 **•	Average Silhouette Width:** The average silhouette width of 0.43 indicates a moderately good clustering solution. A higher value would indicate better-defined clusters.
 
 
+
+
 # Silhouette Plot Visualization for K=9 Clusters
 
-<img width="224" alt="image" src="https://github.com/user-attachments/assets/20beddf6-978e-4fbd-971b-cc479a70e30f">
+![image](https://github.com/user-attachments/assets/c37c7cd8-a15f-4434-9065-32428ef3d723)
 
 **Key Observations from the Plot:**
 
@@ -471,6 +533,7 @@ A silhouette plot is a visualization tool used to assess the quality of a cluste
 
 
 # Silhouette Plot Visualization for K=10 Clusters
+
 ![image](https://github.com/user-attachments/assets/ffbbf59e-7a9e-4485-96b9-5aaf91263c47)
 
 **Key Observations from the Plot:**
@@ -480,6 +543,8 @@ A silhouette plot is a visualization tool used to assess the quality of a cluste
 **•	Cluster Cohesion:** Within each cluster, the bars are generally tall, suggesting that the data points are closely related to each other.
 
 **•	Average Silhouette Width:** The average silhouette width of 0.38 indicates a moderately good clustering solution. A higher value would indicate better-defined clusters.
+
+
 
 # Elbow Plot for Optimal Number of Clusters
 
@@ -545,9 +610,12 @@ The optimal number of clusters is the value of k where the gap statistic starts 
 
 **•	Avoids Subjectivity**: Unlike methods like the elbow method, which can be subjective, the gap statistic provides a more quantitative approach.
 
+
 **In Conclusion:**
 The gap statistic method is a valuable tool for determining the optimal number of clusters in a dataset. 
 By comparing the clustering structure of the actual data to random data, it provides a more objective and reliable way to evaluate different clustering solutions.
+
+
 
 # Result for Clustering
 
@@ -588,6 +656,8 @@ Based on the output, we can infer that the clustering algorithm has identified d
 
 The clusters with lower within-cluster sum of squares are likely more tightly packed, indicating that the data points within those clusters are more similar to each other.
 
+
+
 # Visualization for K-Means Clustering Results (Annual Income)
 
 ![image](https://github.com/user-attachments/assets/2942915e-9603-4440-bdb5-676cba757451)
@@ -615,9 +685,11 @@ Each dot represents a customer, and the color of the dot indicates the cluster t
 They may be more budget-conscious or have specific needs that drive their spending behavior.
 
 
+
 # Visualization for K-Means Clustering Results (Spending Score)
 
 ![image](https://github.com/user-attachments/assets/61c7fcf4-ac0d-414d-8932-ab7d848c6831)
+
 
 **Key Observations:**
 
@@ -636,6 +708,7 @@ They may be more budget-conscious or have specific needs that drive their spendi
 **•	Cluster 6:** This cluster represents middle-aged customers with high spending scores. They may be affluent individuals or professionals with high disposable incomes.
 
 
+
 # Visualization for K-Means Clustering Results (Classes)
 
 ![image](https://github.com/user-attachments/assets/feef9392-4b9d-4e3f-b90b-1a97829bd3a3)
@@ -647,6 +720,8 @@ They may be more budget-conscious or have specific needs that drive their spendi
 **•	Cluster Separation:** The clusters appear to be well-separated from each other, suggesting that the algorithm has effectively grouped similar data points together.
 
 **•	Cluster Density**: Some clusters appear to be denser than others, indicating that these clusters contain more data points.
+
+
 
 # Conclusions:
 
